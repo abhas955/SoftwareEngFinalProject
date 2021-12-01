@@ -1,0 +1,30 @@
+
+
+.carousel {
+    margin: auto;
+    width: 640px;
+    height: 800px;
+}
+
+#carouselExampleIndicators a.carousel-control-next {
+height: 16%;
+top: 33%;
+width: 56px;
+background: black;
+//add your own CSS as you need
+}
+
+#carouselExampleIndicators a.carousel-control-prev {
+height: 16%;
+top: 33%;
+width: 56px;
+background: black;
+//add your own CSS as you need
+}
+
+.contentA{
+    
+}
+.contentA .card {
+    background: none;
+}
