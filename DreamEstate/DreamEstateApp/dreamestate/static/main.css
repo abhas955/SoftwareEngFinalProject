@@ -2,15 +2,16 @@
 
 .carousel {
     margin: auto;
+    margin-bottom: 0px;
     width: 640px;
-    height: 800px;
+    height: 430px;
 }
 
 #carouselExampleIndicators a.carousel-control-next {
 height: 16%;
 top: 33%;
 width: 56px;
-background: black;
+background: dimgray;
 //add your own CSS as you need
 }
 
@@ -18,13 +19,32 @@ background: black;
 height: 16%;
 top: 33%;
 width: 56px;
-background: black;
+background: dimgrey;
 //add your own CSS as you need
 }
 
 .contentA{
-    
+
 }
 .contentA .card {
     background: none;
 }
+
+.carousel-inner > .item {
+    height: auto;
+}
+
+@media only screen and (min-width: 768px) {
+    .carousel-inner > .carousel-item {
+        height: 30em;
+    }
+
+    .carousel-inner > .carousel-item img {
+        height: auto;
+        position: absolute;
+        top: 0;
+        width: 50%;
+    }
+
+}
+

@@ -1,1 +1,66 @@
 {% extends 'layouts.html' %}
+
+{% block contentA %}
+<link rel="stylesheet" href="{{url_for('static', filename='main.css')}}">
+
+<div class="card text-center">
+  <div class="card-header">
+
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">About us</h5>
+    <p class="card-text">We are Dream Estate. We help our clients find necessary information as they consider moving to North Carolina. </p>
+
+
+  </div>
+    <div class="card-footer text-muted"></div>
+
+
+ <p>Our features include the following:
+      <ol>
+      <li>Heat map showing mean temperature North Carolinian counties</li>
+      <li>Violent crimes by state since 1990</li>
+      <li>A forecast of percentage change of prices of homes in NC</li>
+      <li>Corona Virus confirmed cases in North Carolina dating to December 6, 2021</li>
+      </ol>
+
+      </div>
+
+
+
+
+
+
+
+
+    <section class="fixed-bottom">
+  <!-- Footer -->
+  <footer class="text-center text-white" style="background-color: #0a4275;">
+    <!-- Grid container -->
+    <div class="container p-4 pb-0">
+      <!-- Section: CTA -->
+      <section class="">
+        <p class="d-flex justify-content-center align-items-center">
+          <span class="me-3">Register for free</span>
+         <a href="{{url_for('register')}}" class="btn btn-primary">Sign up</a>
+
+          </button>
+        </p>
+      </section>
+      <!-- Section: CTA -->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2021 Copyright:
+      <a class="text-white" href="">Dream Estate Project</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+</section>
+
+
+
+{% endblock contentA %}

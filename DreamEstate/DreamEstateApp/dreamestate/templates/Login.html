@@ -1,5 +1,82 @@
 {% extends 'layouts.html' %}
 
-{% block content %}
-<h2>Log in</h2>
-{% endblock content %}
+{% block contentA %}
+<div class="container w-50">
+    <form method="POST" action="">
+        {{form.hidden_tag()}}
+        <fieldset>
+            <legend class="border-bottom mb-4">Login</legend>
+
+
+
+            <div class="form-group">
+                {{form.email.label(class="form-control-label")}}
+                {%if form.email.errors%}
+                {{form.email(class="form-control form-control-lg is-invalid")}}
+                    {%for error in form.email.errors%}
+                        <span>{{error}}</span>
+                    {%endfor%}
+                    {% else %}
+                    {{form.email(class="form-control form-control-lg")}}
+                {%endif%}
+
+
+            </div>
+
+            <div class="form-group">
+                {{form.password.label(class="form-control-label")}}
+                {%if form.password.errors%}
+                {{form.password(class="form-control form-control-lg is-invalid")}}
+                    {%for error in form.password.errors%}
+                        <span>{{error}}</span>
+                    {% endfor %}
+                    {% else %}
+                    {{form.password(class="form-control form-control-lg")}}
+                {%endif%}
+
+
+            </div>
+
+
+
+        </fieldset>
+
+        <div class="form-group mt-4">
+            {{form.submit(class="btn btn-primary")}}
+        </div>
+    </form>
+
+
+</div>
+
+
+
+
+<section class="fixed-bottom">
+  <!-- Footer -->
+  <footer class="text-center text-white" style="background-color: #0a4275;">
+    <!-- Grid container -->
+    <div class="container p-4 pb-0">
+      <!-- Section: CTA -->
+      <section class="">
+        <p class="d-flex justify-content-center align-items-center">
+          <span class="me-3">Register for free</span>
+         <a href="{{url_for('register')}}" class="btn btn-primary">Sign up</a>
+
+          </button>
+        </p>
+      </section>
+      <!-- Section: CTA -->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2021 Copyright:
+      <a class="text-white" href="{{url_for('homepage')}}">Dream Estate Project</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+</section>
+{% endblock contentA %}
