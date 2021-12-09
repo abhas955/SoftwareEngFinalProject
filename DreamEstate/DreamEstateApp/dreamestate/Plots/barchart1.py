@@ -11,11 +11,13 @@ filtered_df = df[df['StateName'] == 'NC']
 # Removing empty spaces from State column to avoid errors
 filtered_df = filtered_df.apply(lambda x: x.str.strip() if x.dtype == "object" else x)
 
+filtered_df = filtered_df.drop_duplicates(subset=['CountyName'], keep='last')
+
 # Creating sum of number of cases group by State Column
 new_df = filtered_df.groupby(['CountyName'])['ForecastYoYPctChange'].sum().reset_index()
 
 # Sorting values and select first 20 states
-new_df = new_df.sort_values(by=['ForecastYoYPctChange'], ascending=[False]).head(20)
+new_df = filtered_df.sort_values(by=['ForecastYoYPctChange'], ascending=[False]).head(100)
 
 # Preparing data
 data = [go.Bar(x=new_df['CountyName'], y=new_df['ForecastYoYPctChange'])]
